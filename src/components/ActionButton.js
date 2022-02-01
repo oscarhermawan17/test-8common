@@ -13,7 +13,7 @@ import DoNotDisturbOutlinedIcon from '@mui/icons-material/DoNotDisturbOutlined';
 import styles from './ActionButton.styles'
 
 export default function ActionButton({ onReply, onReplyAll, onForward, onEscalate, onDiscard }) {
-  const [moreButton, setMoreButton] = React.useState(false)
+  const [moreButton, setMoreButton] = React.useState(false);
 
   return (
     <>

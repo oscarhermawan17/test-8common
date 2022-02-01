@@ -6,8 +6,9 @@ import HeaderFromComponent from './HeaderComponent/HeaderFromComponent';
 import HeaderDateComponent from './HeaderComponent/HeaderDateComponent';
 import styles from './CardHeader.styles'
 
-export default function CardHeader({ message, expanded, setExpanded, onReply, onReplyAll, onForward, onDiscard, onEscalate }) {
-
+export default function CardHeader({ 
+  message, expanded, setExpanded, onReply, onReplyAll, onForward, onDiscard, onEscalate
+}) {
   return (
     <div style={styles.wrapperCardHeader}>
       <div style={styles.isExpand(expanded)}>

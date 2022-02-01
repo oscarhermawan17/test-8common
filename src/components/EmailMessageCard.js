@@ -8,11 +8,10 @@ import styles from './EmailMessageCard.styles';
 export default function EmailMessageCard({ 
   message, defaultExpanded, onReply, onReplyAll, onForward, onDiscard, onEscalate
 }) {
-  const [expanded, setExpanded] = React.useState(defaultExpanded);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  const [expanded, setExpanded] = React.useState(defaultExpanded),
+    handleExpandClick = () => {
+      setExpanded(!expanded);
+    };
 
   return (
     <Card style={styles.wrapperEmailMessageCard}>

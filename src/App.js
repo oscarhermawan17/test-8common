@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { messages } from './data/data';
+import Fizzbuzz from './Fizzbuzz';
 import EmailMessageCard from './components/EmailMessageCard';
 import styles from './App.styles.js'
 
@@ -27,7 +28,12 @@ function App() {
             onEscalate={(message) => console.log("onEscalate", message)}
           />
         </div>
-      ))} 
+      ))}
+
+
+      <div style={styles.fizzbuzzApp}>
+        <Fizzbuzz />
+      </div>
     </div>
   );
 }
