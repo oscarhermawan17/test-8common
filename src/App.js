@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+
+import { emailMessage } from './data/data';
+import EmailMessageCard from './components/EmailMessageCard';
+
 
 function App() {
+  const [messages, setMessages] = useState(emailMessage)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      { /** 
+       * more_horiz
+       * 1. Reply: reply
+       * 2. Reply all: reply_all
+       * 3. Forward
+       * 5. Discard : do_not_disturb
+       */}
+
+      {messages.map(({ id, dateTimeCreated, from, to, cc, contentPreview, content, defaultExpanded }) => (
+        <div style={{ marginTop: 10 }} key={id}>
+          {console.log(messages[0].content)}
+          <EmailMessageCard
+            message={{
+              id,
+              dateTimeCreated,
+              from,
+              to,
+              cc,
+              contentPreview,
+              content,
+            }}
+            defaultExpanded={defaultExpanded}
+            onReply={(message) => console.log("onReply", message)}
+            onReplyAll={(message) => console.log("onReplyAll", message)}
+            onForward={(message) => console.log("onForward", message)}
+            onDiscard={(message) => console.log("onDiscard", message)}
+            onEscalate={(message) => console.log("onEscalate", message)}
+          />
+        </div>
+      ))} 
+      
+    </>
   );
 }
 
