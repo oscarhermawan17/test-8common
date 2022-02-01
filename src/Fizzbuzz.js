@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { CSVLink } from "react-csv";
 
 const isInputUserTrue = number => number.from <= number.to && number.from > 0 && number.to > 0
 
@@ -44,16 +45,24 @@ function Fizzbuzz() {
   
   return (
     <>
-      <TextField id="outlined-from" label="Input number from (1)" variant="outlined" value={number.from} type="number" onChange={e => settingNumber(e.target.value, "from", setNumber, setFizzBuzzString)}/>
-      <TextField id="outlined-to" label="Input number to" variant="outlined" value={number.to} type="number" onChange={e => settingNumber(e.target.value, "to", setNumber, setFizzBuzzString)}/>
+      <TextField style = {{ width: 150}} id="outlined-from" label="Input number from (1)" variant="outlined" value={number.from} type="number" onChange={e => settingNumber(e.target.value, "from", setNumber, setFizzBuzzString)}/>
+      <TextField style = {{ width: 150}} id="outlined-to" label="Input number to" variant="outlined" value={number.to} type="number" onChange={e => settingNumber(e.target.value, "to", setNumber, setFizzBuzzString)}/>
       <Button 
-        style={{ height: 55 }} variant="contained" color={isInputUserTrue(number) ? 'primary' : 'error'}
+        style={{ marginLeft: 5, height: 55 }} variant="contained" color={isInputUserTrue(number) ? 'primary' : 'error'}
         onClick={() => onSubmit(number, setFizzBuzzString)}>Submit
       </Button>
 
-      {fizzBuzzString && <div style={{ marginTop: 30 }}>
-        {fizzBuzzString}
-      </div>}
+      {fizzBuzzString && (
+        <Button variant="contained" style={{ marginLeft: 5, height: 55 }}>
+          <CSVLink style={{ textDecoration: 'none', color: 'white' }} data={fizzBuzzString} filename={"fizzbuzz.csv"} target="_blank">Download in CSV</CSVLink>
+        </Button>  
+      )}
+
+      {fizzBuzzString && (
+        <div style={{ marginTop: 30 }}>
+          {fizzBuzzString}
+        </div>
+      )}
     </>
   );
 }
