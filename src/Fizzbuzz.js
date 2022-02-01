@@ -31,7 +31,6 @@ const onSubmit = (number, setFizzBuzzString) => {
         tmpFizzBuzzArray.push(i)
       }
     }
-    console.log('tmpFizzBuzzArray', tmpFizzBuzzArray);
     setFizzBuzzString(tmpFizzBuzzArray.join(', '))
   }
 }

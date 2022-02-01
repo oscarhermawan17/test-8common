@@ -27,8 +27,8 @@ export default function ActionButton({ onReply, onReplyAll, onForward, onEscalat
               </ListItemIcon>
               <Typography style={styles.whiteColor} variant="inherit">Reply</Typography>
             </MenuItem>
-            <MenuItem style={styles.borderMenu}onClick={() => console.log('...')}>
-              <ListItemIcon onClick={() => setMoreButton(!moreButton)}>
+            <MenuItem style={styles.borderMenu} onClick={() => setMoreButton(!moreButton)}>
+              <ListItemIcon>
                   <MoreHorizIcon style={styles.whiteColor} fontSize="large" />
               </ListItemIcon>
             </MenuItem>
