@@ -9,4 +9,4 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Notes
-If you want edit the data, you can edit data.js file on `src/data/data.js`
+If you want to edit the data, you can edit data.js's file on `src/data/data.js`
