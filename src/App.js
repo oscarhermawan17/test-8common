@@ -1,25 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import { emailMessage } from './data/data';
+import { messages } from './data/data';
 import EmailMessageCard from './components/EmailMessageCard';
 
 
 function App() {
-  const [messages, setMessages] = useState(emailMessage)
-
   return (
     <>
-      { /** 
-       * more_horiz
-       * 1. Reply: reply
-       * 2. Reply all: reply_all
-       * 3. Forward
-       * 5. Discard : do_not_disturb
-       */}
-
       {messages.map(({ id, dateTimeCreated, from, to, cc, contentPreview, content, defaultExpanded }) => (
         <div style={{ marginTop: 10 }} key={id}>
-          {console.log(messages[0].content)}
           <EmailMessageCard
             message={{
               id,
@@ -39,7 +28,6 @@ function App() {
           />
         </div>
       ))} 
-      
     </>
   );
 }

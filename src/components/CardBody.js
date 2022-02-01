@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import Text from './Text'
+import styles from './CardBody.styles'
 
-export default function CardBody({ contentPreview, defaultExpanded, children }) {
+export default function CardBody({ contentPreview, expanded, children, onClick }) {
 
   return (
-    <div style={{ padding: '0px 16px', fontSize: 14 }}>
-      {defaultExpanded ? children : contentPreview}
+    <div onClick={onClick} style={styles.wrapperCardBody}>
+      {expanded ? children : contentPreview}
     </div>
   );
 }

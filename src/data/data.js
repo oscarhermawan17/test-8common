@@ -1,4 +1,4 @@
-export const emailMessage = [{
+export const messages = [{
   id: "1",
   dateTimeCreated: 1560120300000,
   from: { name: "Sianna Hallas", email: "shallas@gmail.com" },
@@ -16,9 +16,9 @@ export const emailMessage = [{
   }, {
     id: "2",
     dateTimeCreated: 1560120300000,
-    from: { name: "Support", email: "support@company.com" },
+    from: { email: "support@company.com" },
     to: [{ name: "Sianna Hallas", email: "shallas@gmail.com" }],
-    cc: [],
+    cc: [{ name: "Oscar", email: "oscar@mitrais.com" }],
     contentPreview:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
       //sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in",

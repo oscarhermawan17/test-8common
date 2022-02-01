@@ -1,8 +1,8 @@
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 
-const Text = ({ propStyle, mainText, isEmail }) => {
+const Text = ({ propStyle, mainText, isEmail, onClick }) => {
   return (
-    <span style={propStyle}>
+    <span style={propStyle} onClick={onClick}>
       {isEmail ? `(${mainText});` : mainText }
     </span>
   )
