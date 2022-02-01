@@ -8,6 +8,7 @@ import Reply from '@mui/icons-material/Reply';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import ReplyAll from '@mui/icons-material/ReplyAll';
 import ForwardTwoToneIcon from '@mui/icons-material/ForwardTwoTone';
+import LabelImportantIcon from '@mui/icons-material/LabelImportant';
 import DoNotDisturbOutlinedIcon from '@mui/icons-material/DoNotDisturbOutlined';
 
 import styles from './ActionButton.styles'
@@ -52,7 +53,7 @@ export default function ActionButton({ onReply, onReplyAll, onForward, onEscalat
           </MenuItem>
           <MenuItem onClick={() => onEscalate('ActionsButtonjs OnClick Escalate')}>
             <ListItemIcon>
-              <DoNotDisturbOutlinedIcon style={styles.darkBlue} fontSize="medium" />
+              <LabelImportantIcon style={styles.darkBlue} fontSize="medium" />
             </ListItemIcon>
             <Typography variant="inherit">Escalate</Typography>
           </MenuItem>
