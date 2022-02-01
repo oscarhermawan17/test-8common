@@ -2,11 +2,11 @@ import React from 'react'
 
 import { messages } from './data/data';
 import EmailMessageCard from './components/EmailMessageCard';
-
+import styles from './App.styles.js'
 
 function App() {
   return (
-    <>
+    <div style={styles.wrapperApp}>
       {messages.map(({ id, dateTimeCreated, from, to, cc, contentPreview, content, defaultExpanded }) => (
         <div style={{ marginTop: 10 }} key={id}>
           <EmailMessageCard
@@ -28,7 +28,7 @@ function App() {
           />
         </div>
       ))} 
-    </>
+    </div>
   );
 }
 
