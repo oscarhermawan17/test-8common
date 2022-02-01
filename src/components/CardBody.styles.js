@@ -1,7 +1,7 @@
 const styles = {
   wrapperCardBody: {
-    padding: '0px 20px',
-    fontSize: 14
+    fontSize: 16,
+    padding: '0px 30px',
   }
 };
 

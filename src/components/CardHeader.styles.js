@@ -1,7 +1,6 @@
 const styles = {
   wrapperCardHeader: { 
-    padding: '0px 20px',
-    fontSize: 14
+    padding: '0px 30px',
   },
   isExpand: value => value ? ({
       display: 'grid',

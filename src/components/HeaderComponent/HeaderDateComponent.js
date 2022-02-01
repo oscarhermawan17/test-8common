@@ -11,7 +11,7 @@ export default function HeaderDateComponent({ dateTimeCreated, expanded, setExpa
 
   const stringFullDay = `${day} ${month}/${date}/${year} ${time}`
   return (
-    <div style={expanded ? {} : { float: 'right', marginTop: 10 }} onClick={() => setExpanded(!expanded)}>
+    <div style={expanded ? { marginTop: 5 } : { float: 'right' }} onClick={() => setExpanded(!expanded)}>
       {stringFullDay}
     </div>
   );

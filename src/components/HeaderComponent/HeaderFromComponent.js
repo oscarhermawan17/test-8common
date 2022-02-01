@@ -1,19 +1,14 @@
 import * as React from 'react';
-
-import Text from '../Text'
+import Typography from '@mui/material/Typography';
 
 export default function HeaderFromComponent({ from, expanded, setExpanded }) {
   return expanded ? (
-    <Text
-      onClick={() => setExpanded(false)}
-      propStyle={{ fontWeight: 'bold' }}
-      mainText={from.hasOwnProperty('name') ? `${from.name} (${from.email})` :  from.email} 
-    />
+    <Typography sx={{ fontWeight: 'bold' }} onClick={() => setExpanded(false)}>
+      {from.hasOwnProperty('name') ? `${from.name} (${from.email})` :  from.email}
+    </Typography>
   ) : (
-    <Text
-      onClick={() => setExpanded(true)}
-      propStyle={{ fontWeight: 'bold' }}
-      mainText={from.hasOwnProperty('name') ? from.name : from.email} 
-    />
+    <Typography sx={{ fontWeight: 'bold' }} onClick={() => setExpanded(true)}>
+      {from.hasOwnProperty('name') ? from.name : from.email} 
+    </Typography>
   )
 }

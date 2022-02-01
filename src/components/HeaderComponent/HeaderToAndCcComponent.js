@@ -7,7 +7,7 @@ export default function HeaderToAndCcComponent({ title, recipient, setExpanded }
   return (
     <div onClick={() => setExpanded(false)}>
       <Text
-        propStyle={{ fontWeight: 'bold' }}
+        propStyle={{ fontWeight: 400 }}
         mainText={title} 
       />
         {recipient.map(({ name, email}) => (
